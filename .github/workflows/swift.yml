@@ -17,7 +17,7 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app
 
-    - name: Build and test "UsersAppTests"
-      run: xcodebuild clean build test -project UsersApp.xcodeproj -scheme "UsersAppTests" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.0,name=iPhone 13 Pro Max" ONLY_ACTIVE_ARCH=YES
+    - name: Build and test "UsersApp"
+      run: xcodebuild clean build test -project UsersApp.xcodeproj -scheme "UsersApp" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.0,name=iPhone 13 Pro Max" ONLY_ACTIVE_ARCH=YES
 
 
