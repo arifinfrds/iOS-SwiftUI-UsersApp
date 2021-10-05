@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  UsersView.swift
 //  UsersApp
 //
 //  Created by Arifin Firdaus on 05/10/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct UsersView: View {
 	var body: some View {
 		NavigationView {
 			List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
@@ -18,8 +18,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct UsersView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        UsersView()
     }
 }
