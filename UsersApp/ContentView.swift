@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-		VStack(alignment: .leading) {
-			Text("Name")
-				.font(.title3)
-				.foregroundColor(.primary)
-			Text("Email")
-				.font(.body)
-				.foregroundColor(.secondary)
+	var body: some View {
+		NavigationView {
+			List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+				UserCell(name: "Arifin Firdaus", email: "test@email.com")
+			}
+			.navigationBarTitle(Text("Users"), displayMode: .large)
 		}
     }
 }

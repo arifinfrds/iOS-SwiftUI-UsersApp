@@ -14,6 +14,7 @@
 		1AE6AAF1270C28730087A321 /* UsersAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AAF0270C28730087A321 /* UsersAppTests.swift */; };
 		1AE6AAFB270C28730087A321 /* UsersAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AAFA270C28730087A321 /* UsersAppUITests.swift */; };
 		1AE6AAFD270C28730087A321 /* UsersAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AAFC270C28730087A321 /* UsersAppUITestsLaunchTests.swift */; };
+		1AE6AB0A270C29D80087A321 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AB09270C29D70087A321 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		1AE6AAF6270C28730087A321 /* UsersAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsersAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AE6AAFA270C28730087A321 /* UsersAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAppUITests.swift; sourceTree = "<group>"; };
 		1AE6AAFC270C28730087A321 /* UsersAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1AE6AB09270C29D70087A321 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				1AE6AADF270C286D0087A321 /* UsersAppApp.swift */,
 				1AE6AAE1270C286D0087A321 /* ContentView.swift */,
+				1AE6AB09270C29D70087A321 /* UserCell.swift */,
 				1AE6AAE3270C28720087A321 /* Assets.xcassets */,
 				1AE6AAE5270C28720087A321 /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				1AE6AAE2270C286D0087A321 /* ContentView.swift in Sources */,
 				1AE6AAE0270C286D0087A321 /* UsersAppApp.swift in Sources */,
+				1AE6AB0A270C29D80087A321 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
