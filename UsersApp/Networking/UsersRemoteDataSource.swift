@@ -6,32 +6,45 @@
 //
 
 import Foundation
-import Combine
 
 protocol UsersRemoteDataSource {
-	func getUsers() -> AnyPublisher<[User], Error>
+	func getUsers(completion: @escaping (Result<[User], Swift.Error>) -> Void)
 }
 
 final class URLSessionUsersRemoteDataSource: UsersRemoteDataSource {
 
 	private let session: URLSession
 
+	enum Error: Swift.Error {
+		case unexpectedResponse
+		case decodingFail
+	}
+
 	init(session: URLSession = URLSession(configuration: .ephemeral)) {
 		self.session = session
 	}
 
-	func getUsers() -> AnyPublisher<[User], Error> {
+	func getUsers(completion: @escaping (Result<[User], Swift.Error>) -> Void) {
 		let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
-		return session
-			.dataTaskPublisher(for: url)
-			.tryMap { (data: Data, response: URLResponse) in
 
-				guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-					throw URLError(.badServerResponse)
+		session.dataTask(with: url) { data, urlResponse, error in
+			if let dataTaskError = error {
+				completion(.failure(dataTaskError))
+			} else {
+				guard let httpResponse = urlResponse as? HTTPURLResponse, httpResponse.statusCode == 200, let receivedData = data else {
+					completion(.failure(URLSessionUsersRemoteDataSource.Error.unexpectedResponse))
+					return
 				}
-				return data
+
+				do {
+					let users = try JSONDecoder().decode([User].self, from: receivedData)
+					completion(.success(users))
+				} catch {
+					completion(.failure(URLSessionUsersRemoteDataSource.Error.decodingFail))
+				}
 			}
-			.decode(type: [User].self, decoder: JSONDecoder())
-			.eraseToAnyPublisher()
+		}
+		.resume()
 	}
+
 }

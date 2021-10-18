@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import Combine
 @testable import UsersApp
 
 class URLSessionUsersAPIEndToEndTests: XCTestCase {
@@ -14,10 +13,13 @@ class URLSessionUsersAPIEndToEndTests: XCTestCase {
 	func test_getUsersAPIEndToEndTests_deliversUsers() {
 		let sut = makeSUT()
 
-		_ = sut.getUsers().sink { error in
-			XCTFail("Expect receive value, got error: \(error) instead.")
-		} receiveValue: { users in
-			XCTAssertTrue(!users.isEmpty)
+		sut.getUsers { result in
+			switch result {
+			case let .success(users):
+				XCTAssertTrue(!users.isEmpty)
+			case let .failure(error):
+				XCTFail("Expect receive value, got error: \(error) instead.")
+			}
 		}
 	}
 
