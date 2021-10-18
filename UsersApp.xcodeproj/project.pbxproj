@@ -19,6 +19,7 @@
 		1AE6AAFD270C28730087A321 /* UsersAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AAFC270C28730087A321 /* UsersAppUITestsLaunchTests.swift */; };
 		1AE6AB0A270C29D80087A321 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AE6AB09270C29D70087A321 /* UserCell.swift */; };
 		414566B9271D5AF4002655D0 /* LoadUsersFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414566B8271D5AF4002655D0 /* LoadUsersFromRemoteUseCaseTests.swift */; };
+		414566BB271DA9D1002655D0 /* LoadUsersFromRemoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414566BA271DA9D1002655D0 /* LoadUsersFromRemoteUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		1AE6AAFC270C28730087A321 /* UsersAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		1AE6AB09270C29D70087A321 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		414566B8271D5AF4002655D0 /* LoadUsersFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUsersFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
+		414566BA271DA9D1002655D0 /* LoadUsersFromRemoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadUsersFromRemoteUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				1A7CD653270C390C00073433 /* LoadUsersUseCase.swift */,
 				1A7CD655270C397400073433 /* User.swift */,
+				414566BA271DA9D1002655D0 /* LoadUsersFromRemoteUseCase.swift */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				1A7CD654270C390C00073433 /* LoadUsersUseCase.swift in Sources */,
 				1AE6AAE2270C286D0087A321 /* UsersView.swift in Sources */,
 				1AE6AAE0270C286D0087A321 /* UsersAppApp.swift in Sources */,
+				414566BB271DA9D1002655D0 /* LoadUsersFromRemoteUseCase.swift in Sources */,
 				1A7CD656270C397400073433 /* User.swift in Sources */,
 				1A7CD658270C39A600073433 /* UsersRemoteDataSource.swift in Sources */,
 				1AE6AB0A270C29D80087A321 /* UserCell.swift in Sources */,
