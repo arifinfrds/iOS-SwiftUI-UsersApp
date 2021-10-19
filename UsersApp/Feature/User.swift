@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct User: Codable {
+struct User: Codable, Identifiable {
 	let name: String
 	let email: String
+	
+	var id: Int {
+		return Int.random(in: 1...1000)
+	}
 }
